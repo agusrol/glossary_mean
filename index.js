@@ -21,6 +21,11 @@ mongoose
 .then(() => console.log('MongoDB connected succesfully')) //Try catch
 .catch((err) => console.error('MongoDB connection error: ', err));
 
+//Para verificar conexión
+mongoose.connection.on('connected', () => {
+  console.log(`Connected to database: ${mongoose.connection.db.databaseName}`);
+});
+
 // Ruta básica para min(GET)
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo desde Express!');
