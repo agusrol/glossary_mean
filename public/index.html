@@ -1,0 +1,42 @@
+<!-- Ests es la página que entrega el servidor de express por defecto, la que está en public y es index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src='app.js'></script>
+</head>
+<body>
+    <h1>CRUD</h1>
+
+<!-- Formulario -->
+    <form action="/wordForm" id="wordForm" method="POST"> 
+        <!-- id -->
+        <input type="hidden" id="wordId">
+        <!-- word -->
+        <label for="word">Word: </label>
+        <input type="text" id="word" name="word" required> <br><br>
+        <!-- definition -->
+        <label for="definition">Definition: </label>
+        <textarea name="definition" id="definition" required></textarea> <br><br>
+        <!-- button -->
+        <button type="submit">Add</button>
+
+    </form>
+<!-- Lista de palabras -->
+    <h2>Word List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Definition</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="wordList"> </tbody>
+        
+    </table>
+    
+</body>
+</html>
