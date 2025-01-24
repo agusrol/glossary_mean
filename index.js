@@ -38,7 +38,7 @@ const wordSchema =  new mongoose.Schema({
     definition: String
 });
 
-const Word = mongoose.model('Word', wordSchema);
+const Word = mongoose.model('Word', wordSchema, 'glosario');
 
 ////Old word page
 // app.get('/words', async(req,res) => {
