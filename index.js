@@ -10,7 +10,8 @@ app.use(express.json());
 //Middleware para el encoding
 app.use(express.urlencoded({ extended: true }));
 
-const MONGO_URI = 'mongodb://localhost:27017/glosario_p44' //Identificador de la base de datos
+// const MONGO_URI = 'mongodb://localhost:27017/glosario_p44' //Identificador de la base de datos (el localhost es cuando es local, pero vamos a usar otra en Internet)
+const MONGO_URI = 'mongodb+srv://agustinlawtaro:r2+BF.cxkTX.&Xb@clusterfree.jzkmw.mongodb.net/?retryWrites=true&w=majority&appName=ClusterFree'
 
 //Conectamos a Mongo usando el módulo
 
