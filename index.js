@@ -119,9 +119,17 @@ app.delete('/words/:id', async(req,res)=>{
   }
 })
 
-// Puerto donde se ejecutará el servidor
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+// // Puerto donde se ejecutará el servidor de FORMA LOCAL
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+// });
+
+
+//Para ejecutar en HEROKU usamos el env, si no está, usamos el 3000 (para lo local)
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
 
