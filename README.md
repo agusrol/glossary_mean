@@ -1,2 +1,2 @@
 # glossary_mean
-CRUD with words to form a personal dictionary.
+Simple CRUD developed with MEAN were you can create a dictionary of words. It has a pretty simple frontend, just plain HTML.
